@@ -1,0 +1,14 @@
+<!-- captureExample.html -->
+<template>
+    <div><h2>Capture Phase Event</h2></div>
+    <div class="grandParent" onclick={handleGrandParentClick}>
+        Grandparent
+        <div class="parent" onclick={handleParentClick}>
+            Parent
+            <div class="child">
+                Child
+                <button onclick={handleButtonClick}>Click me</button>
+            </div>
+        </div>
+    </div>
+</template>

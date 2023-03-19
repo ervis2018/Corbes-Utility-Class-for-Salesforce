@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 03-18-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<aura:component implements="force:appHostable,force:hasRecordId,flexipage:availableForAllPageTypes">
+    <aura:attribute name="contacts" type="Contact[]" default="[
+        {'Name': 'John Doe', 'Title': 'Account Executive', 'Phone': '555-1234', 'Email': 'jdoe@example.com'},
+        {'Name': 'Jane Smith', 'Title': 'Sales Manager', 'Phone': '555-5678', 'Email': 'jsmith@example.com'},
+        {'Name': 'Bob Johnson', 'Title': 'Business Analyst', 'Phone': '555-9876', 'Email': 'bjohnson@example.com'},
+        {'Name': 'Sarah Lee', 'Title': 'Marketing Specialist', 'Phone': '555-4321', 'Email': 'slee@example.com'}
+    ]" />
+    <lightning:layout multipleRows="true">
+        <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="12" padding="around-small">
+            <aura:iteration items="{!v.contacts}" var="contact">
+                <lightning:card title="{!contact.Name}">
+                    <p>{!contact.Title}</p>
+                    <p>{!contact.Phone}</p>
+                    <p>{!contact.Email}</p>
+                </lightning:card>
+            </aura:iteration>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

@@ -1,0 +1,28 @@
+.container {
+    background-color: lightblue;
+    padding: 1rem;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.child {
+    background-color: lightgray;
+    padding: 1rem;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 0.5rem;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    background-color: blue;
+}
